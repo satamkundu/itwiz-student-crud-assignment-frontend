@@ -9,6 +9,9 @@
             <input type="password" id="password" class="w-full mb-3 p-2 border rounded" placeholder="Password" required>
             <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Login</button>
         </form>
+        <p class="mt-4 text-center">
+            To access system <a href="/register" class="text-blue-500 hover:text-blue-700">Register here</a>
+        </p>
     </div>
 
     <script>
