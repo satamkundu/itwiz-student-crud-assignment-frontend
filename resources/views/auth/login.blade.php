@@ -30,7 +30,13 @@
                 })
                 .then(function(response) {
                     localStorage.setItem('token', response.data.token);
-                    alert('Login Successful');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: 'Login Successful',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
                     window.location.href = "/students";
                 })
                 .catch(function(error) {
