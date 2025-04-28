@@ -20,8 +20,6 @@ Route::view('/register', 'auth.register')->name('register');
 // Students CRUD
 Route::view('/students', 'students.index')->name('students.index');
 Route::view('/students/create', 'students.create')->name('students.create');
-Route::view('/students/{id}', 'students.show')->name('students.show');
-Route::view('/students/{id}/edit', 'students.edit')->name('students.edit');
 
 Route::get('/', function () {
     return redirect('/login');

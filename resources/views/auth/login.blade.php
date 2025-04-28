@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('auth.auth-check')
     <div class="max-w-md mx-auto bg-white p-6 rounded shadow">
         <h2 class="text-2xl font-bold mb-4">Login</h2>
         <form id="loginForm">
@@ -29,7 +30,7 @@
                     }
                 })
                 .then(function(response) {
-                    localStorage.setItem('token', response.data.token);
+                    localStorage.setItem('token', response.data.data.token);
                     Swal.fire({
                         icon: 'success',
                         title: 'Success!',

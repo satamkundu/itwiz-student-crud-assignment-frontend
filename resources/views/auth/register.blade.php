@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('auth.auth-check')
 <div class="max-w-md mx-auto bg-white p-6 rounded shadow">
     <h2 class="text-2xl font-bold mb-4">Register</h2>
     <form id="registerForm">

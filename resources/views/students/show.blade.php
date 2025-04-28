@@ -9,20 +9,18 @@
 </div>
 
 <script>
-const API_BASE_URL = "http://127.0.0.1:8000/api";
-
 $(document).ready(function(){
     const token = localStorage.getItem('token');
     const id = window.location.pathname.split('/').pop(); // extract id from URL
 
-    axios.get(`${API_BASE_URL}/students/${id}`, {
+    axios.get(`${API_BASE_URL}students/${id}`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'Accept': 'application/json'
         }
     })
     .then(function(response){
-        const student = response.data;
+        const student = response.data.data;
         $('#studentDetails').html(`
             <p><strong>Name:</strong> ${student.name}</p>
             <p><strong>Email:</strong> ${student.email}</p>
